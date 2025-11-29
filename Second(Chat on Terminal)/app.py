@@ -2,8 +2,8 @@ from supabase import create_client, Client
 import time
 import os
 
-SUPABASE_URL = "https://xtmankqkoyvisyolkdua.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh0bWFua3Frb3l2aXN5b2xrZHVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0MjI4MDQsImV4cCI6MjA3OTk5ODgwNH0.0_7DNv_jRtD4wmvYKtKFUS6tFlGzy8dtzaaUd8AVO1k"
+SUPABASE_URL = "........................."
+SUPABASE_KEY = "........................."
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realtime Chat App</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Socket.IO CDN -->
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+</head>
+<body class="bg-gray-100">
+
+<div id="login-section" class="flex items-center justify-center h-screen">
+  <div class="bg-white shadow-xl rounded-xl p-8 w-96">
+    <h1 class="text-2xl font-bold mb-4 text-center">Welcome</h1>
+    <input id="username" type="text" placeholder="Username" class="w-full border p-2 rounded mb-3" />
+    <input id="password" type="password" placeholder="Password" class="w-full border p-2 rounded mb-4" />
+    <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-2 rounded">
+      Continue
+    </button>
+  </div>
+</div>
+
+<div id="chat-section" class="hidden h-screen flex flex-col">
+  <div class="bg-blue-600 text-white p-4 text-center text-xl font-semibold">Realtime Chat</div>
+  <div id="messages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50"></div>
+  <div class="p-4 bg-white flex gap-2 border-t">
+    <input id="messageInput" type="text" placeholder="Type a message..." class="flex-1 border p-2 rounded" />
+    <button onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

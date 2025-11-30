@@ -9,7 +9,7 @@ async function login() {
   if (!username || !password) return alert("Enter username & password");
 
   // Call backend to create user
-  const res = await fetch("http://localhost:5001/create-account", {
+  const res = await fetch("https://chat-app-red-tau.vercel.app/create-account", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password })
@@ -27,7 +27,7 @@ async function login() {
 
 // ----- SOCKET.IO -----
 function connectSocket() {
-  socket = io("http://localhost:5001");
+  socket = io("https://chat-app-red-tau.vercel.app:5001"); // backend on Vercel
 
   socket.on("connect", () => console.log("Connected to server"));
 
